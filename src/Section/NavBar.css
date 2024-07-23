@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;  
+}
+
+.container{
+    width: 100%;
+    height: 95px;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+#links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+#links li{
+    position: relative;
+    padding: 0 20px;
+
+}
+
+#links li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(92, 92, 237);
+    transition: .3s ease-in-out;
+}
+
+#links li a i{
+    color: rgb(113, 107, 107);
+}
+
+#links li a:hover{
+    color: rgb(102, 102, 249);
+    
+}
+
+#links li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgb(92, 92, 237);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+
+.logo img{
+    width: 75px;
+    border-radius: 50%;
+    margin-left: 75px;
+}
+
+
+.contact button{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: scale 0.2 ease;
+}
+
+.contact .signup{
+    background-color: rgb(132, 132, 244);
+    color: white;
+    border: none;
+    font-size: 20px;
+}
+
+.contact button:hover{
+    scale: 1.05;
+}
+.contact button:active{
+    scale: 0.95;
+}
+
+#menu{
+    display: none;
+    margin-right: 25px ;
+}
+ #menu i{
+    font-size: 28px;
+    font-weight: 600;
+
+ }
+
+
+/* RESPONSIVE DESIGN*/
+
+@media(max-width: 988px){
+    #menu{
+        display: block;
+    }
+    #links{
+        display: none;
+    }
+    .contact button{
+        display: none;
+    }
+    
+}
+@media(max-width: 412px){
+    .container{
+        position:absolute;
+        left: 190px;
+    }
+    #menu{
+        margin-left: 75px;
+    }
+
+}
